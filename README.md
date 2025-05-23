@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FakeStore E-Commerce Application
+
+A modern e-commerce application built with Next.js that showcases products from the FakeStore API, providing a complete shopping experience with product browsing, cart functionality, and checkout process.
+
+## Tech Stack
+
+### Core Technologies
+- **Next.js 14**: React framework with App Router for server-side rendering and routing
+- **TypeScript**: For type safety and better developer experience
+- **React 18**: UI library for building component-based interfaces
+
+### UI Framework
+- **Material UI (MUI)**: Component library implementing Google's Material Design
+  - Grid/Box components for responsive layouts
+  - Card, Dialog, and Paper components for content presentation
+  - Form controls (TextField, Select) for user input
+  - Snackbar/Alert system for toast notifications
+
+### State Management
+- **React Context API**: Used for global state management
+  - CartContext: Managing shopping cart state
+  - NotificationContext: Managing toast notifications
+  - AuthContext: Managing user authentication state
+
+### Data Fetching
+- **React Query**: For server state management, caching, and data fetching
+- **Axios**: HTTP client for API requests
+
+### Authentication
+- **Custom Auth Implementation**: Using the FakeStore API for login/logout functionality
+- **RouteGuard Component**: Protecting routes that require authentication
+
+### Features
+- **Product Catalog**: Browsing products with search and filter capabilities
+- **Shopping Cart**: Add, remove, update quantities, and checkout
+- **Toast Notifications**: User feedback for cart actions and authentication
+- **Pagination**: For cart items and product listings
+
+### Development Tools
+- **ESLint**: For code quality and consistency
+- **Next.js Dev Server**: With hot module replacement for development
+
+## Project Structure
+
+- `/src/app`: Application pages using Next.js App Router
+- `/src/components`: Reusable React components
+- `/src/contexts`: React context providers
+- `/src/utils`: Utility functions and API integrations
+- `/src/types`: TypeScript type definitions
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to view the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## API Integration
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This application uses the [FakeStore API](https://fakestoreapi.com/) to fetch product data, handle authentication, and simulate cart operations.
