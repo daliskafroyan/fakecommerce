@@ -52,10 +52,10 @@ A modern e-commerce application built with Next.js that showcases products from 
 
 ```bash
 # Install dependencies
-npm install
+pnpm install
 
 # Run the development server
-npm run dev
+pnpm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to view the application.
